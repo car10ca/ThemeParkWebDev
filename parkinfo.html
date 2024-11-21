@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- including all the meta info, incl. page language setting as per w3c standards recommendation -->
+<html lang="en">
+
+<!-- creating a favicon via the profile method as per w3c -->
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.png">
+
+  <!-- Preconnect to google fonts to make sure it loads in time -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:wght@300&family=Turret+Road:wght@500&display=swap"
+    rel="stylesheet">
+
+  <!-- Link to external stylesheets -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/pacman.css">
+  <link rel="stylesheet" type="text/css" href="styles/circles.css">
+
+  <meta charset="utf-8" />
+  <meta name="description" content="Virtuality Theme Park Information with opening hours, ticket prices and faqs">
+  <meta name="keywords" content="virtuality, park info, faqs, opening hours, tickets, prices">
+  <meta name="author" content="web-develop-g2g0-mid">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title in browser tab-->
+  <title>Virtuality | Park Info</title>
+</head>
+
+<body>
+
+  <!-- Floating shapes animation container-->
+  <div class="container-circles">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="grid">
+
+    <!-- Collapsible sidebars-->
+    <aside class="sidebar-left"></aside>
+    <aside class="sidebar-right"></aside>
+
+    <!-- Colourful button navigation with dropdown | Kerstin, Gerry -->
+    <nav>
+      <!-- Logo | Kerstin, Gerry -->
+      <a href="index.html"><img src="images/logo/logo.svg" class="logo" alt=""></a>
+      <a href="index.html">
+        <div class="btn btn-home">Home</div>
+      </a>
+      <div class="dropdown">
+        <a href="attractions.html">
+          <div class="btn btn-attractions">Attractions</div>
+        </a>
+        <div class="dropdown-content">
+          <a href="attractions.html#vr">Virtual Reality</a>
+          <a href="attractions.html#esports">eSports</a>
+          <a href="attractions.html#retro">Retro</a>
+          <a href="attractions.html#casino">Casino</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="parkinfo.html">
+          <div class="btn btn-parkinfo">Park Info</div>
+        </a>
+        <div class="dropdown-content">
+          <a href="parkinfo.html#what-to-expect">What To Expect</a>
+          <a href="parkinfo.html#tickets">Tickets</a>
+          <a href="parkinfo.html#location">How to get here</a>
+          <a href="parkinfo.html#faq">FAQs</a>
+          <a href="parkinfo.html#hours">Opening Hours</a>
+          <a href="parkinfo.html#contact-us">Contact Us</a>
+        </div>
+      </div>
+      <a href="parkinfo.html#contact-us">
+        <div class="btn btn-contact">Contact</div>
+      </a>
+      <a href="http://www.ticketmaster.co.uk" target="_blank">
+        <div class="btn btn-buytickets">Buy
+          Tickets</div>
+      </a>
+    </nav>
+
+
+    <!-- Header section-->
+    <header>
+      <!-- Large glowing page header -->
+      <h1 class="page-title neon-1 glow">Park Information</h1>
+      <div class="wrapper">
+        <a class="anchor" id="what-to-expect"></a>
+        <h2>What To Expect</h2>
+        <div class="wrapper-img">
+          <img src="images/neon/sunset.gif" class="info-logo gif"
+            alt="Moving image of a fast-moving neon landscape and a sunset">
+        </div>
+        <div class="wrapper-text">
+          <p>
+            Virtuality is the world's first electronic gaming theme park. Our modern building was
+            completed in 2020 and fully air-conditioned / heated and wheelchair friendly.</p>
+
+          <p>We cover 4 main areas in the gaming world: <a href="attractions.html#retro">Retro</a>, <a
+              href="attractions.html#esports">eSports</a>, <a href="attractions.html#casino">Casino</a> and in
+            particular
+            <a href="attractions.html#vr">Virtual Reality</a>.
+          </p>
+
+          <p>On this page, you'll find detailed information on tickets and reservations, how to get here as well as
+            answers
+            to some of the most frequently asked questions. </p>
+        </div>
+      </div>
+      <hr>
+    </header>
+
+
+    <main>
+      <!--Tickets and reservation options content div | Gerry -->
+      <section>
+        <a class="anchor" id="tickets"></a>
+        <div class="wrapper">
+          <h2>Tickets and Reservations</h2>
+          <div class="wrapper-img">
+            <img src="images/ticket.png" class="info-logo no-border" alt="Neon sign: Tickets">
+          </div>
+          <div class="wrapper-text">
+            <p>Tickets can be purchased from the gates on your arrival, however, we recommend that you book online to
+              guarantee a spot and skip the lines.
+            </p>
+            <p>
+              <a href="http://www.ticketmaster.co.uk" target="_blank">Buy online now</a> and save off the front gate
+              price with the best deals on admission.
+            </p>
+            <p>
+              For large groups of more than 20 guests, please <a href="parkinfo.html#contact-us">contact us</a> about
+              our special rates. We apply the following ticket price categories for day visitors purchasing tickets at
+              the entry gate.
+            </p>
+          </div>
+
+          <!--Table with price options | Gerry -->
+          <div class="wrapper-text">
+            <table>
+              <tr>
+                <th>
+                  Type
+                </th>
+                <th>
+                  Price
+                </th>
+              </tr>
+              <tr>
+                <td>Adult Day Pass </td>
+                <td>$39.99</td>
+              </tr>
+              <tr>
+                <td>Student Day Pass</td>
+                <td>$19.99</td>
+              </tr>
+              <tr>
+                <td>Kids (Ages 6-17) </td>
+                <td>$14.99</td>
+              </tr>
+              <tr>
+                <td>Pensioners (Ages 65+)</td>
+                <td>$19.99</td>
+              </tr>
+              <tr>
+                <td>Explorers (Ages 0-5)</td>
+                <td>Free</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <hr>
+      </section>
+
+      <!--Directions and map info section | Gerry-->
+      <section>
+        <a class="anchor" id="location"></a>
+        <div class="wrapper">
+          <h2>How to get here</h2>
+
+          <!-- Goolge Maps frame-->
+          <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAk-IsBGLFWzsuc86E5AA3yrtN85xqX1Fw&zoom=11&q=39.7492211,-89.7844775" allowfullscreen></iframe>
+
+          <div class="wrapper-text">
+            <p>
+              About 5 minutes from Springfield on the I72, you will pass our signature rooftops on the left. You really
+              can't miss it. Once past, take the next turnoff to Castle Rock. Right at the first traffic light and then
+              just follow the billboards to the parking area.
+            </p>
+
+            <p>You can also find us on Apple Maps, Google Maps or Bing.</p>
+            <div class="wrapper-img">
+
+              <img src="images/entrance.jpg" class="content" alt="Our signature rooftops are visible from the A3.">
+            </div>
+
+
+          </div>
+        </div>
+        <hr>
+      </section>
+
+      <!-- FAQ content section | Kerstin, Gerry -->
+      <section>
+        <a class="anchor" id="faq"></a>
+        <div class="wrapper">
+          <h2>Frequently Asked Questions</h2>
+          <div class="wrapper-img">
+            <img src="images/neon/DidYouKnow.jpg" class="info-logo" alt="Neon sign: Did you know?">
+          </div>
+          <div class="wrapper-text">
+            <h3>Why don't you provide a more detailed map of the park?</h3>
+            <p>
+              We're constantly upgrading our consoles, arcade and virtual realtiy
+              machines. There's also often a change in interest in our experiences to
+              which we adjust accordingly. This means moving the items around often to
+              make sure everyone can get the most out of all experiences whilst they
+              visit.
+            </p>
+            <p>
+              Keep an eye out for our neon on park signage like the one throughout this page. These are always kept
+              up-to-date.
+            </p>
+            <p>Alternatively you can ask any of our staff members for help.</p>
+            <hr>
+          </div>
+
+          <div class="wrapper-img">
+            <img src="images/neon/smoking.jpeg" class="info-logo" alt="Neon sign: Smoking Area">
+          </div>
+          <div class="wrapper-text">
+            <h3>Where can I smoke?</h3>
+            <p>Since Virtuality is mostly an indoor theme park, you might be worried about where to smoke. Luckily, we
+              are
+              so retro, we don't really care where you smoke as long as you don't start a fire or burn other visitors.
+            </p>
+            <p>
+              Vintage spinning ashtrays from the 80s are provided throughout, or otherwise you can just ash on the
+              carpets.
+            </p>
+            <p>Out of cigarettes? No problem, we have vending machines by the toilets that accept cash, apple pay,
+              google
+              pay, android pay, pay pal, visa and mastercard.
+            </p>
+            <hr>
+          </div>
+
+          <div class="wrapper-img">
+            <img src="images/neon/WiFiZone.jpg" class="info-logo" alt="Neon sign: WiFi Zone">
+          </div>
+          <div class="wrapper-text">
+            <h3>Do you have WiFi?</h3>
+            <p>
+              Yes, we do. WiFi is provided throughout the park free of charge.
+            </p>
+            <p>For security reasons, we require that you create an account to use the internet. Usage is unlimited but
+              we
+              restrict users from downloading large files (above 500MB) such as long videos. This is to ensure that all
+              our visitors can enjoy the internet without any delay.</p>
+            <p>We understand that many people work remotely these days and are required to remain available at all
+              times.
+              For this purpose, it is possible to purchase a two hour, unlimited data internet pass. You can purchase
+              this
+              directly on our app.
+            </p>
+            <hr>
+          </div>
+          <div class="wrapper-img">
+            <img src="images/neon/restaurant.jpg" class="info-logo" alt="Neon sign: Restaurants">
+          </div>
+
+          <div class="wrapper-text">
+            <h3>Where can I eat? </h3>
+            <p>Each of our 4 sectors contain a foodcourt area designated on our map and with signposts inside the park.
+            </p>
+            <p>Our food courts all cover an extensive range of international cuisine, so you're sure to find something
+              suitable to your taste.</p>
+            <p>Some of the foods offered are: Pizza, Sushi, Noodles, Sweets, Artisan Burgers, Surf and Turf, Seafood,
+              Vegan, Vegetarian, Ice Cream, Coffee and Cakes, Mexican, Indian, Turkish, the list goes on. </p>
+            <p>To protect our equipment, please be advised that food can't be consumed whilst in the gaming halls.
+              However, we do allow the consumption of drinks given they are kept in a bottle with a fully closable lid
+              to avoid spills.</p>
+          </div>
+        </div>
+        <hr>
+      </section>
+
+      <!-- Table with opening hours | Gerry -->
+      <section>
+
+        <a class="anchor" id="hours"></a>
+        <div class="wrapper">
+          <h2>Park Opening Hours</h2>
+          <div class="wrapper-img">
+            <img src="images/neon/openNow.png" class="info-logo" alt="Neon sign: Opening Hours">
+          </div>
+          <div class="wrapper-text">
+            <table>
+              <tr>
+                <th>
+                  Day
+                </th>
+                <th>
+                  Hours
+                </th>
+              </tr>
+              <tr>
+                <td>Monday - Friday</td>
+                <td>9AM - Midnight</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>9AM - 1AM</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>9AM - 9PM</td>
+              </tr>
+              <tr>
+                <td>Christmas</td>
+                <td>Closed</td>
+              </tr>
+              <tr>
+                <td>New Years Day</td>
+                <td>9AM - 2AM</td>
+              </tr>
+              <tr>
+                <td>May 4th</td>
+                <td>Open 24 hours</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <hr>
+      </section>
+
+      <!-- Contact info | Gerry -->
+      <section>
+        <a class="anchor" id="contact-us"></a>
+        <div class="wrapper">
+          <div class="wrapper-text">
+            <h2>Get in touch</h2>
+            <address>
+              <p>Tel: 1800-000-1234<br>
+                Email: <a href="mailto:info@virtuality.com">info@virtuality.com</a></p>
+
+              <p>Virtuality Park<br>
+                8 - 16 Bit Avenue<br>
+                1011101 Reality Ville
+              </p>
+            </address>
+
+            <h3>Connect with us via social media</h3>
+            <div class="wrapper-social">
+              <a href="http://www.facebook.com" target="_blank"><img src="images/social/iconFacebook.png" class="social"
+                  alt="Facebook Icon"></a>
+              <a href="http://www.twitter.com" target="_blank"><img src="images/social/iconTwitter.png" class="social"
+                  alt="Twitter Icon"></a>
+              <a href="http://www.youtube.com" target="_blank"><img src="images/social/iconYouTube.png" class="social"
+                  alt="YouTube Icon"></a>
+              <a href="http://www.instagram.com" target="_blank"><img src="images/social/iconInstagram.png"
+                  class="social" alt="Instagram Icon"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer with links and copyright information | Kerstin, Gerry -->
+    <footer>
+      <p><a href="index.html"><img src="images/logo/logo.svg" class="logo" alt="Virtuality Theme Park Logo"></a>
+      </p>
+      <p>Copyright &copy; 2020 | Virtuality Park</p>
+
+      <p>Virtuality Park<br>
+        8 - 16 Bit Avenue<br>
+        1011101 Reality Ville
+      </p>
+
+      <p class="quick-links"><span><b>Quick Links:</b></span>
+        <a href="index.html">Home</a> &#8226;
+        <a href="images/map.jpg" target="_blank">Park Map</a> &#8226;
+        <a href="http://www.ticketmaster.co.uk" target="_blank">Buy Tickets</a> &#8226;
+        <a href="parkinfo.html#faq">FAQs</a> &#8226;
+        <a href="attractions.html">Attractions</a>
+      </p>
+
+      <!-- Animated CSS Pacman container -->
+      <div class="pacman glow">
+
+        <div class="pacman-top"></div>
+        <div class="pacman-bottom"></div>
+        <div class="feed"></div>
+
+
+      </div>
+
+    </footer>
+
+  </div><!-- end of the grid container -->
+
+</body>
+
+
+</html>

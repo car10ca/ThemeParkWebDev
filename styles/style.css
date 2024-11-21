@@ -1,0 +1,647 @@
+/* -------------------------<<< ROOT, COLOR, PAGE and SCROLL styling | Kerstin, Daksh, Gerry >>>------------------------- */
+
+body {
+  /* using a google font as main font and then any font from the sans-serif family as a fallback */
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--page-bg);
+  font-size: 12px;
+  color: var(--off-white);
+  /* remove extra margin */
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(74, 154, 228, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility: Disable smooth scrolling when "prefers-reduced-motion" is enabled */
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Retro neon color classes using CSS variables | Gerry, Kerstin, Sherry */
+
+:root {
+  --page-bg: #090911;
+  --neon-1: #4dfafb;
+  --neon-1-dark: #30bae0;
+  --neon-2: #ea5fde;
+  --neon-3: #ece416;
+  --neon-4: #a579cd;
+  --off-white: #ebfcff;
+  --cyan-contra: #86eeff;
+}
+
+.neon-1 {
+  color: var(--neon-1);
+}
+
+.neon-2 {
+  color: var(--neon-2);
+}
+
+.neon-3 {
+  color: var(--neon-3);
+}
+
+.neon-4 {
+  color: var(--neon-4);
+}
+
+/* -----Custom rounded scroll bar -----*/
+
+::-webkit-scrollbar {
+  width: 16px;
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 50px rgba(45, 125, 200, 0.6);
+  box-shadow: inset 0 0 50px rgba(45, 125, 200, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 50px rgba(45, 125, 200, 1);
+  box-shadow: inset 0 0 50px rgba(45, 125, 200, 1);
+}
+
+/* page anchors with 120px offset to cater for sticky navbar */
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+}
+
+/* -----------------------<<< PAGE LAYOUT styling >>>---------------------------- */
+
+/* CSS Grid for page layout*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-gap: none;
+}
+
+nav {
+  background: linear-gradient(#000000d5, #0000002d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / 4;
+  grid-row: 1 / 1;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+
+header {
+  background: radial-gradient(#1b173f, var(--page-bg));
+  grid-column: 2 / 3;
+  grid-row: 2 / 2;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+  padding: 30px;
+}
+
+aside.sidebar-left {
+  background: var(--page-bg);
+  background-image: url('../images/background/bg5.jpg');
+  background-size: 600px;
+  background-position: 0px 300px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+aside.sidebar-right {
+  background: var(--page-bg);
+  background-image: url('../images/background/bg6.jpg');
+  background-size: 600px;
+  background-position: 0px 300px;
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+}
+
+main {
+  background: radial-gradient(#1b173f, var(--page-bg));
+  grid-column: 2 / 3;
+  grid-row: 3 / 3;
+  align-items: center;
+}
+
+footer {
+  grid-column: 1 / 4;
+  background-color: #1a1a1a;
+}
+
+@media all and (max-width: 700px) {
+  header, main {
+    grid-column: 1 / 4;
+  }
+  aside {
+    display: none !important;
+  }
+  p.quick-links>span {
+    display: none !important;
+  }
+}
+
+/* ------- Flexbox content wrappers ---------- */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+}
+
+.wrapper-text {
+  padding: 1vw 3vw 1vw 3vw;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.wrapper-text div {
+  margin: auto;
+}
+
+.wrapper-img {
+  padding: 2vw;
+  flex-grow: 1;
+}
+
+.wrapper h2, .wrapper h3 {
+  text-align: center;
+}
+
+/* layout of social icons */
+
+.wrapper-social {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+/* layout of social icons */
+
+.wrapper-social a {
+  flex-grow: 1;
+}
+
+address p {
+  text-align: center;
+}
+
+/* empty div with 20px height to create some space between content, avoids adding a ton of <br> tags or lots of margins / padding | Kerstin */
+
+.spacer {
+  height: 20px;
+}
+
+section {
+  padding: 10px 0px 20px 0px;
+}
+
+/* ---------------------------------<<< TEXT STYLING | Kerstin, Daksh, Gerry >>>--------------------------------- */
+
+/* ----------Catchy neon glow for large page headers-----------*/
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 30px var(--neon-2), 0px 0px 30px var(--neon-3), 0px 0px 50px var(--neon-4), 0px 0px 100px var(--neon-1);
+    filter: drop-shadow(0px 0px 40px var(--neon-2));
+  }
+  to {
+    text-shadow: 0px 0px 20px var(--neon-4), 0px 0px 10px var(--neon-2), 0px 0px 40px var(--neon-2), 0px 0px 80px var(--neon-4);
+    filter: drop-shadow(0px 0px 10px var(--neon-2));
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0px 0px 30px var(--neon-2), 0px 0px 30px var(--neon-3), 0px 0px 50px var(--neon-4), 0px 0px 100px var(--neon-1);
+    filter: drop-shadow(0px 0px 40px var(--neon-2));
+  }
+  to {
+    text-shadow: 0px 0px 20px var(--neon-4), 0px 0px 10px var(--neon-2), 0px 0px 40px var(--neon-2), 0px 0px 80px var(--neon-4);
+    filter: drop-shadow(0px 0px 10px var(--neon-2));
+  }
+}
+
+h1.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Daksh: font-sizes for different tags 
+style guide from: https://material.io/design/typography/the-type-system.html#type-scale */
+
+p {
+  font-size: max(14px, 1vw);
+  letter-spacing: 0.2em;
+  line-height: 1.5em;
+  margin: 2vw 2vw 2vw 2vw;
+  text-align: justify;
+}
+
+h1 {
+  font-size: max(4vw, 40px);
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  /* h1 needs to be boldest */
+  font-family: "Monoton", cursive;
+}
+
+h2 {
+  /* ratio of h1 to h2 : 0.625 */
+  font-size: max(25px, 2.5vw);
+  letter-spacing: 0.15em;
+  /* h2 needs to be lighter */
+  font-weight: 600;
+  font-family: "Turret Road", cursive;
+  margin: 1vw;
+}
+
+h2.subtitle {
+  font-size: max(15px, 1.5vw);
+}
+
+h3 {
+  /* ratio of h2 to h3 : 0.667 */
+  font-size: max(17px, 2vw);
+  letter-spacing: 0px;
+  /* h3 needs to be bolder */
+  font-weight: 500;
+  font-family: "Turret Road", cursive;
+  margin: 1vw;
+}
+
+@media only screen and (max-width: 700px) {
+  p {
+    margin: 20px;
+  }
+}
+
+/* <<< TABLE styling | Daksh >>> */
+
+table, th {
+  border: 2px solid #aaaaaa;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th {
+  font-size: max(2vw, 20px);
+  font-weight: 500;
+  font-family: "Turret Road", cursive;
+  margin: 3vw;
+  text-align: center;
+}
+
+td {
+  font-size: max(1.2vw, 12px);
+  border: 1px solid #aaaaaa;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+/*---------------------------------<<< IMAGE and MAP styling >>>--------------------------------------------*/
+
+/* large images used in content sections*/
+
+img.content {
+  margin-top: 0px;
+  width: 100%;
+  height: auto;
+  border-radius: 1vw;
+}
+
+/* Virtuality goggles logo styling - must not go below a certain minimum size */
+
+nav .logo {
+  float: left;
+  top: 0px;
+  left: 0px;
+  height: max(6vw, 55px);
+  padding: 1vw 2vw 1vw 0vw;
+  /*more space on right before nav buttons*/
+}
+
+/* Large images/logos used in info content */
+
+img.info-logo {
+  width: 30vw;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px #000000;
+}
+
+img.gif {
+  width: max(30vw);
+  max-width: none;
+  min-width: 300px;
+  margin: none;
+}
+
+/* Small logos for social network links */
+
+img.social {
+  width: max(4vw, 40px);
+  padding: none;
+}
+
+/* Override class for certain no-border images*/
+
+.no-border {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+div.hero {
+  text-align: center;
+}
+
+/* Link styling | Kerstin, Gerry */
+
+a:link, a:visited {
+  color: var(--neon-2);
+  text-decoration: none;
+}
+
+/* Mouse over / selected link - neon glow effect */
+
+a:hover, a:active {
+  color: var(--neon-3);
+  text-shadow: 0px 0px 10px var(--neon-1), 0px 0px 20px var(--neon-1), 0px 0px 30px var(--neon-1), 0px 0px 40px var(--neon-1);
+}
+
+/* Light grey links for back to top | Kerstin */
+
+a.grey {
+  color: #c6c6c6;
+}
+
+/* Google Maps Widget*/
+
+iframe.map {
+  width: 90%; 
+  height: 50vh;
+  border: none;
+  border-radius: 1vw;
+  margin-top: 1.5vw;
+}
+
+/*---------------<<< NAVIGATION BAR AND BUTTON STYLES >>>---------------------- */
+
+/*General button styles*/
+
+div.btn {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn {
+  white-space: nowrap;
+  color: #000000;
+  padding: 1.5vw;
+  font-size: max(1.2vw, 10px);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Nav bar button text styling | Gerry*/
+
+div.buy-btn, div.btn, .dropdown {
+  font-family: "Turret Road", cursive;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 10px var(--neon-1);
+  filter: drop-shadow(0px 0px 40px var(--neon-2));
+  color: var(--neon-1);
+  text-shadow: 1px 1px 5px #000000;
+  text-decoration: none
+}
+
+/* ensures no underline on the link text*/
+
+.btn a, .btn a:hover {
+  color: #000000;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* nav - dropdown content (hidden by default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333333ee;
+  backdrop-filter: blur(5px);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  animation: fade;
+  animation-duration: 0.4s;
+}
+
+/* nav - Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes fade {
+  from {
+    max-height: 0px;
+    display: none;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* nav - links inside the dropdown */
+
+.dropdown-content a {
+  color: var(--off-white);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* nav - change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #858585;
+}
+
+/*----------Specific navbar button colors------------*/
+
+.btn-home {
+  background-color: var(--neon-3);
+}
+
+.btn-attractions {
+  background-color: var(--neon-2);
+}
+
+.btn-parkinfo {
+  background-color: var(--neon-1-dark);
+}
+
+.btn-buytickets {
+  background-color: var(--neon-4);
+}
+
+.btn-contact {
+  background-color: var(--off-white);
+}
+
+/*----------Buy button styles - CTA elements used in paragraphs-------*/
+
+.buy-btn {
+  border-radius: 2px;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: max(16px, 1.5vw);
+  width: max(140px, 20vw);
+  /* Must be large enough for animation to fit */
+  padding: 1.5vw;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buy-btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.2s;
+  color: #000000;
+}
+
+.buy-btn:hover {
+  text-shadow: none;
+}
+
+/* --------These styles make the arrows appear on buy buttons----------*/
+
+.buy-btn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.2s;
+}
+
+.buy-btn:hover span {
+  padding-right: 25px;
+}
+
+.buy-btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Override class to avoid link effects on buttons */
+
+a.no-glow {
+  text-shadow: none;
+}
+
+/* ---------<<< ATTRACTIONS PAGE - specific styles | Kerstin, Gerry >>>------------ */
+
+/* Virtual Reality */
+
+h2.vr, h3.vr {
+  color: rgb(253, 254, 2);
+}
+
+.buy-btn-vr {
+  background-color: #f4ed08;
+}
+
+/* eSports */
+
+h2.esports, h3.esports {
+  color: var(--cyan-contra);
+}
+
+.buy-btn-esports {
+  background-color: var(--cyan-contra);
+}
+
+/* Retro */
+
+h2.retro, h3.retro {
+  color: var(--neon-2);
+}
+
+.buy-btn-retro {
+  background-color: var(--neon-2);
+}
+
+/* Casino */
+
+h2.casino, h3.casino {
+  color: #0bff01;
+}
+
+.buy-btn-casino {
+  background-color: #0bff01;
+}
+
+/* -----------------<<< FOOTER styling >>>------------------------- */
+
+footer>p {
+  color: #c6c6c6;
+  font-size: max(12px, 0.85vw);
+  text-align: center;
+}
+
+/* grey logo using opacity */
+
+footer img.logo {
+  height: max(5vw, 50px);
+  opacity: 0.5;
+}

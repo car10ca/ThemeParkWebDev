@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- Begin meta info, incl. page language setting as per w3c standards recommendation | Kerstin-->
+<html lang="en">
+
+<!-- creating a favicon via the profile method as per w3c -->
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo/favicon.png">
+
+  <!-- Preconnect to google fonts to make sure it loads in time -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:wght@300&family=Turret+Road:wght@500&display=swap"
+    rel="stylesheet">
+
+  <!-- Link to external stylesheets -->
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/pacman.css">
+  <link rel="stylesheet" type="text/css" href="styles/carousel.css">
+  <link rel="stylesheet" type="text/css" href="styles/circles.css">
+
+  <meta charset="utf-8">
+  <meta name="description" content="List of attractions for Virtuality Theme Park">
+  <meta name="keywords" content="virtuality, attractions, theme park, retro, casino, vr, virtual reality, eSports">
+  <meta name="author" content="web-develop-g2g0-mid">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title in browser tab-->
+  <title>Virtuality | Attractions</title>
+
+  <!-- Load carousel script asyncronously-->
+  <script src="scripts/carousel-manual.js" async></script>
+</head>
+
+<body>
+
+  <!-- Floating shapes animation container-->
+  <div class="container-circles">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="grid">
+
+    <!-- Collapsible sidebars-->
+    <aside class="sidebar-left"></aside>
+    <aside class="sidebar-right"></aside>
+
+    <!-- Colourful button navigation with dropdown | Kerstin, Gerry -->
+    <nav>
+      <a id="top"></a>
+
+      <!-- Logo | Kerstin, Gerry -->
+      <a href="index.html"><img src="images/logo/logo.svg" class="logo" alt=""></a>
+      <a href="index.html">
+        <div class="btn btn-home">Home</div>
+      </a>
+      <div class="dropdown">
+        <a href="attractions.html">
+          <div class="btn btn-attractions">Attractions</div>
+        </a>
+        <div class="dropdown-content">
+          <a href="attractions.html#vr">Virtual Reality</a>
+          <a href="attractions.html#esports">eSports</a>
+          <a href="attractions.html#retro">Retro</a>
+          <a href="attractions.html#casino">Casino</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="parkinfo.html">
+          <div class="btn btn-parkinfo">Park Info</div>
+        </a>
+        <div class="dropdown-content">
+          <a href="parkinfo.html#what-to-expect">What To Expect</a>
+          <a href="parkinfo.html#tickets">Tickets</a>
+          <a href="parkinfo.html#location">How to get here</a>
+          <a href="parkinfo.html#faq">FAQs</a>
+          <a href="parkinfo.html#hours">Opening Hours</a>
+          <a href="parkinfo.html#contact-us">Contact Us</a>
+        </div>
+      </div>
+      <a href="parkinfo.html#contact-us">
+        <div class="btn btn-contact">Contact</div>
+      </a>
+      <a href="http://www.ticketmaster.co.uk" target="_blank">
+        <div class="btn btn-buytickets">Buy
+          Tickets</div>
+      </a>
+    </nav>
+
+
+    <!-- Page title header-->
+    <header>
+
+      <!-- Large glowing page header -->
+      <h1 class="page-title neon-1 glow">Our Attractions</h1>
+      <p>Virtuality is an indoor theme park that covers Virtual Reality, eSports, Retro &amp; Casino. We invite you to
+        browse through our image gallery, or read on to find out more information about the attractions we have to
+        offer.</p>
+
+    </header>
+
+    <!-- Main section content with separate sections | Kerstin-->
+    <main>
+
+      <!-- BEGIN IMAGE carousel -->
+      <div class="carousel">
+        <div class="slideshow-container">
+
+          <!-- each container holds the numbers on the top left, the link to the image and the text below it -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 of 7</div>
+            <img src="images/carousel/arcade3.jpg" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Classic arcade room</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">2 of 7</div>
+            <img src="images/carousel/museum.jpg" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Our new digital exhibition space</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">3 of 7</div>
+            <img src="images/carousel/vr2.jpg" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Virtual reality experience</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">4 of 7</div>
+            <img src="images/carousel/vr4.jpg" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Virtual reality experience</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">5 of 7</div>
+            <img src="images/carousel/casino1.png" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Our modern casino</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">6 of 7</div>
+            <img src="images/carousel/arcade2.jpg" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Our arcade hall</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">7 of 7</div>
+            <img src="images/carousel/eSports3.jpg" alt="Image carousel showing gaming attractions" style="width:100%">
+            <div class="text">Our eSports Arena</div>
+          </div>
+          <a class="prev white" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next white" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <div class="spacer"></div>
+
+        <!-- This is for the dots below the image carousel, they also serve as image navigation and are clickable -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+        </div>
+      </div>
+
+      <!-- END IMAGE carousel -->
+
+      <div class="spacer"></div>
+
+      <hr>
+
+
+      <!-- Begin virtual reality section | Kerstin -->
+      <section>
+        <a class="anchor" id="vr"></a>
+        <div class="wrapper">
+          <div class="wrapper-text">
+
+            <h2 class="vr">Virtual Reality</h2>
+
+            <p class="vr">Virtual or Reality, we'll let you be the judge. Our VR section is our pride and joy and
+              feature
+              full-motion rides that give you all the acceleration of real-life with all the thrills from beyond your
+              imagination. We have different themes that will surely fit your taste. </p>
+
+            <h3 class="vr" id="vr-sports">VR Sports</h3>
+            <p class="vr">Did you ever want to try Snowboarding, Skiing, Surfing, Tennis, Table-Tennis, Football,
+              Basketball, Baseball, Volleyball, Hockey, Ice-Hockey, Rollerblading, Skateboarding? Well, now you can, all
+              without the risk of injury.</p>
+
+            <h3 class="vr" id="vr-rollercoasters">VR Rollercoasters</h3>
+            <p class="vr">Can your take it? Experience an exciting range of VR rollercoasters not released anywhere
+              else.
+              Don't be fooled, these rides are more than meets the eye.</p>
+
+            <h3 class="vr" id="vr-movies">VR Movies</h3>
+            <p class="vr">Take a look at the Titanic - Can you survive a sinking ship?, Pandora - become a Na'vi, Star
+              Wars
+              - Jedi training only for the strongest amongst us, Jurassic Park, Interstellar - Travel to Space, Matrix -
+              train like Neo, ...</p>
+
+            <img src="images/vr.png" class="content"
+              alt="Image of a guest experiencing a forest experience in a wraparound VR room.">
+            <div class="spacer"></div>
+
+            <h3 class="vr" id="vr-travel">VR Travel</h3>
+            <p class="vr">Always wanted to see the world but never managed to? Take a trip to the world’s top 100
+              sightseeing spots (incl. Statue of Liberty, Sydney Opera, Eiffel Tower, Leaning tower of Pisa, Xiqu
+              Centre,
+              Taj Mahal, and many more)</p>
+            <p class="vr">If nature is more your thing then we have something for you too: see the Amazon Forrest,
+              Igazu,
+              Krka park and many others.</p>
+
+            <h3 class="vr" id="vr-pokemon">VR Pokemon &trade; </h3>
+            <p class="vr">Augmented reality brought them close, virtual reality brings them even closer. Pet them, train
+              them, feed them, play with them or battle against other trainers.</p>
+
+
+            <!-- Animated Buy Tickets Button for VR section | Kerstin -->
+            <a href="http://www.ticketmaster.co.uk" target="_blank" class="no-glow">
+              <div class="buy-btn buy-btn-vr"><span>Buy
+                  Tickets</span></div>
+            </a>
+
+            <!-- Back to the top link to avoid scrolling up | Kerstin -->
+            <p><a href="#top" class="grey">&#8227; back to top</a></p>
+          </div>
+        </div>
+        <hr>
+      </section>
+      <!-- End virtual reality section -->
+
+      <!-- Begin eSports section | Kerstin -->
+      <section>
+        <a class="anchor" id="esports"></a>
+        <div class="wrapper">
+          <div class="wrapper-text">
+
+            <h2 class="esports">eSports</h2>
+            <img src="images/esports.jpg" class="content" alt="Image of a large e-Sports arena with large crowd.">
+            <div class="spacer"></div>
+            <p class="esports">Select the platform of your choice (PC, XBOX, PS) and enter the world famous eSports
+              league
+              for the likes of Fortnite, Minecraft, League of Legends, World of Warcraft, Overwatch and many more ...
+              Visit
+              our exclusively built eSports Arena and watch how the famous teams battle it out. Take a look at our
+              events
+              calendar for more information.</p>
+
+
+            <!-- Animated Buy Tickets Button for eSports section | Kerstin -->
+            <a href="http://www.ticketmaster.co.uk" target="_blank" class="no-glow">
+              <div class="buy-btn buy-btn-esports"><span>Buy
+                  Tickets</span></div>
+            </a>
+            <div class="spacer"></div>
+
+            <p class="esports"><a href="#top" class="grey">&#8227; back to top</a></p>
+
+          </div>
+        </div>
+        <hr>
+      </section>
+      <!-- End eSports section | Kerstin -->
+
+
+
+      <!-- Begin Retro section | Kerstin -->
+      <section>
+        <a class="anchor" id="retro"></a>
+        <div class="wrapper">
+          <div class="wrapper-text">
+
+
+            <h2 class="retro">Retro</h2>
+            <img src="images/retro.jpg" class="content"
+              alt="Image of a classic game arcade with upright playing machines.">
+            <div class="spacer"></div>
+            <h3 class="retro" id="arcade">Arcade</h3>
+            <p class="retro">Travel back in time to play on traditional Arcade machines with the likes of Space
+              Invaders,
+              Asteroids, Pac Man, Pong, Galaga, Frogger, Bubble Bobble and many more.</p>
+
+            <h3 class="retro" id="nintendo">Nintendo</h3>
+            <p class="retro">Your all time favourites: Tetris, Super Mario Bros. 1, 2 &amp; 3, Zelda 1 &amp; 2, Contra,
+              Punch-Out, Mega Man, Castlevania, the list goes on. Play on NES, SNES, GameBoy and Nintendo 64.</p>
+
+            <h3 class="retro" id="atari">Atari</h3>
+            <p class="retro">We hold the world record in the largest game collection for Atari games playable on Atari's
+              2600, 5200, 7800 and Jaguar.</p>
+
+            <h3 class="retro" id="sega">Sega</h3>
+            <p class="retro">MasterSystem I, MasterSystem II, Game Gear, Mega Drive, we've got them all.</p>
+
+            <!-- Animated Buy Tickets Button for retro section -->
+            <a href="http://www.ticketmaster.co.uk" target="_blank" class="no-glow">
+              <div class="buy-btn buy-btn-retro"><span>Buy
+                  Tickets</span></div>
+            </a>
+            <p class="retro"><a href="#top" class="grey">&#8227; back to top</a></p>
+          </div>
+        </div>
+        <hr>
+      </section>
+      <!-- End Retro section -->
+
+
+      <!-- Begin Casino section | Kerstin -->
+      <section>
+        <a class="anchor" id="casino"></a>
+        <div class="wrapper">
+          <div class="wrapper-text">
+            <h2 class="casino">Casino</h2>
+            <img src="images/casino.png" class="content"
+              alt="Image of a modern casino with a group of people standing around an electronic games table">
+            <p class="casino">Ready to win big? Blackjack, Roulette, Poker, Slot Machines, Craps, Baccarat? On a tablet,
+              digital slot machines or our newly released Viva Las Vegas VR Casino experience? <em>(18+ only, ID
+                required)</em></p>
+
+            <!-- Animated Buy Tickets Button for Casino section -->
+            <a href="http://www.ticketmaster.co.uk" target="_blank" class="no-glow">
+              <div class="buy-btn buy-btn-casino"><span>Buy
+                  Tickets</span></div>
+            </a>
+            <div class="spacer"></div>
+            <p class="casino"><a href="#top" class="grey">&#8227; back to top</a></p>
+          </div>
+        </div>
+        <hr>
+      </section>
+      <!-- End casino section -->
+
+      <!-- Park map section (maybe also add a link from parkinfo.html?) | Kerstin, Gerry -->
+      <section>
+        <div class="wrapper">
+
+          <h2>Map of Virtuality</h2>
+          <figure>
+            <img src="images/map.jpg" class="content" alt="High contrast map of the Virtuality Theme Park">
+            <figcaption>Our detailed park map is also available as a <a href="images/map.jpg"
+                title="Download PDF of the park map to print at home"> downloadable PDF</a></figcaption>
+          </figure>
+          <p class="retro"><a href="#top" class="grey">&#8227; back to top</a></p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer with links and copyright information | Kerstin, Gerry -->
+    <footer>
+      <p><a href="index.html"><img src="images/logo/logo.svg" class="logo" alt="Virtuality Theme Park Logo"></a>
+      </p>
+      <p>Copyright &copy; 2020 | Virtuality Park</p>
+
+      <p>Virtuality Park<br>
+        8 - 16 Bit Avenue<br>
+        1011101 Reality Ville
+      </p>
+
+      <p class="quick-links"><span><b>Quick Links:</b></span>
+        <a href="index.html">Home</a> &#8226;
+        <a href="images/map.jpg" target="_blank">Park Map</a> &#8226;
+        <a href="http://www.ticketmaster.co.uk" target="_blank">Buy Tickets</a> &#8226;
+        <a href="parkinfo.html#faq">FAQs</a> &#8226;
+        <a href="attractions.html">Attractions</a>
+      </p>
+
+      <!-- Animated CSS Pacman container -->
+      <div class="pacman glow">
+        <div class="pacman-top"></div>
+        <div class="pacman-bottom"></div>
+        <div class="feed"></div>
+      </div>
+
+    </footer>
+
+  </div><!-- End of the grid container -->
+
+</body>
+
+</html>

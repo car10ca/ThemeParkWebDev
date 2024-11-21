@@ -1,0 +1,206 @@
+/* Pacman CSS animation modified from code found on https://codepen.io/wifi/pen/olKxE */
+
+/* Container */
+.pacman {
+    height: 30px;
+    padding: 10px;
+    z-index: 4;
+    pointer-events: none;
+    position: relative;
+    left: 10%;
+    opacity: 0.9;
+    margin: 40px 10px;
+    filter: drop-shadow(0px 0px 10px var(--neon-2));
+}
+
+/*<< PACMAN SECTION >>*/
+
+.pacman-top {
+    background-color: #ece416;
+    height: inherit;
+    width: 60px;
+    border-radius: 100px 100px 0 0;
+    animation: spin1 0.5s infinite linear;
+}
+
+.pacman-bottom {
+    background-color: #ece416;
+    height: inherit;
+    width: 60px;
+    border-radius: 0 0 100px 100px;
+    animation: spin2 0.5s infinite linear;
+}
+
+.feed {
+    margin-top: -100px;
+    margin-left: 0px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -moz-animation: eat 1s linear 0s infinite;
+    -webkit-animation: eat 1s linear 0s infinite;
+    animation: eat 1s linear 0s infinite;
+}
+
+/* Do not show animation on small screens -->*/
+@media all and (max-width: 700px) {
+    .pacman {
+        display: none !important;
+    }
+}
+
+/* Accesibility: Disable animation when "prefers-reduced-motion" is enabled */
+@media screen and (prefers-reduced-motion: reduce) {
+    .pacman {
+        display: none !important;
+    }
+}
+
+/* Animation*/
+
+@keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@-moz-keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+
+@-moz-keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@-webkit-keyframes spin1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+}
+
+@-webkit-keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(35deg);
+    }
+}
+
+@keyframes eat {
+    0% {
+        box-shadow: 100px 65px 0 0 white, 300px 65px 0 0 white, 500px 65px 0 0 white, 700px 65px 0 0 white, 900px 65px 0 0 white, 1100px 65px 0 0 white, 1300px 65px 0 0 rgb(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0px 65px 0 0 white, 100px 65px 0 0 white, 300px 65px 0 0 white, 500px 65px 0 0 white, 700px 65px 0 0 white, 900px 65px 0 0 white, 1100px 65px 0 0 white;
+    }
+}
+
+@-moz-keyframes eat {
+    0% {
+        box-shadow: 100px 65px 0 0 white, 300px 65px 0 0 white, 500px 65px 0 0 white, 700px 65px 0 0 white, 900px 65px 0 0 white, 1100px 65px 0 0 white, 1300px 65px 0 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0px 65px 0 0 white, 100px 65px 0 0 white, 300px 65px 0 0 white, 500px 65px 0 0 white, 700px 65px 0 0 white, 900px 65px 0 0 white, 1100px 65px 0 0 white;
+    }
+}
+
+@-webkit-keyframes eat {
+    0% {
+        box-shadow: 100px 65px 0 0 white, 300px 65px 0 0 white, 500px 65px 0 0 white, 700px 65px 0 0 white, 900px 65px 0 0 white, 1100px 65px 0 0 white, 1300px 65px 0 0 rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0px 65px 0 0 white, 100px 65px 0 0 white, 300px 65px 0 0 white, 500px 65px 0 0 white, 700px 65px 0 0 white, 900px 65px 0 0 white, 1100px 65px 0 0 white;
+    }
+}
+
+/*<< GHOST SECTION >>*/
+
+.ghost {
+    border-radius: 100% 100% 0 0;
+    display: inline-block;
+    height: 140px;
+    margin: 20px;
+    position: relative;
+    width: 120px;
+    background-color: #555555;
+}
+
+.eyes {
+    height: 60px;
+    left: 50%;
+    margin-left: -45px;
+    position: absolute;
+    width: 90px;
+    top: 50px;
+}
+
+.eye {
+    background: #fff;
+    border-radius: 100%;
+    height: 60px;
+    width: 40px;
+}
+
+.iris {
+    background: black;
+    border-radius: 100%;
+    height: 30px;
+    position: absolute;
+    width: 20px;
+    top: 20px;
+}
+
+.leftEye {
+    float: left;
+}
+
+.leftEye .iris {
+    left: 10px;
+}
+
+.rightEye {
+    float: right;
+}
+
+.rightEye .iris {
+    right: 10px;
+}
+
+.ghostTail {
+    background-repeat: repeat-x;
+    bottom: -30px;
+    height: 30px;
+    position: absolute;
+    width: 120px;
+}
+
+.ghostTail {
+    background: linear-gradient(-45deg, transparent 50%, #555555 65%) 0 70%, linear-gradient( 45deg, transparent 50%, #555555 65%) 0 70%;
+    background-size: 30px 30px, 30px 30px;
+}
