@@ -39,4 +39,34 @@ Check out the main pages:
 - **Attractions:** Highlights of the Virtual Reality, eSports, Retro Gaming, and Casino sections.
 - **Park Info:** FAQs, ticket details, and opening hours.
 
+## Possible Improvements
+Although the Virtuality Theme Park website was a successful first project given the circumstances of a university group project, there are several areas where it could be improved:
+
+### 1. Dynamic Content
+- Replace static HTML with a backend framework (e.g., Node.js, Flask) to dynamically generate content.
+- Add a CMS (Content Management System) for easier updates to attractions and park information.
+
+### 2. Accessibility Enhancements
+- Improve compliance with WCAG (Web Content Accessibility Guidelines) by adding ARIA roles and improving keyboard navigation.
+- Enhance text contrast and ensure all interactive elements are easily distinguishable.
+
+### 3. Improved Responsiveness
+- Optimize the layout for smaller devices, ensuring better navigation and readability.
+- Refactor CSS for modern techniques like Flexbox and Grid.
+
+### 4. Enhanced User Interactivity
+- Incorporate interactive maps for attractions using a properly secured Google Maps API or a JavaScript library like Leaflet.js.
+- Add features like ticket booking directly on the website.
+
+### 5. Performance Optimization
+- Minify CSS, JavaScript, and images to improve page load times.
+- Use lazy loading for images and asynchronous loading for scripts.
+
+### 6. Security Improvements
+- Remove hardcoded API keys and replace them with secure environment variables.
+- Perform regular security audits to identify and fix vulnerabilities.
+
+### 7. SEO (Search Engine Optimization)
+- Refactor metadata for better indexing by search engines.
+- Add structured data (JSON-LD) to enhance search result visibility.
 
